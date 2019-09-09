@@ -24,9 +24,26 @@ require_once("config.php");
 //$search = Usuario::search("jo");
 //echo json_encode($search);
 //carrega o usuário carregando login e a senha
-$usuario = new Usuario();
-$usuario->login("root","9876");
+//$usuario = new Usuario();
+//$usuario->login("root","9876");
 
-echo $usuario
+//echo $usuario
+//$aluno = new Usuario();
+//$aluno->setDeslogin ("aluno");
+//$aluno->setDessenha ("@aluno");
+
+//criando umn novo usuário
+
+//$aluno = new Usuario("aluno","@aluno");
+
+//$aluno->insert();
+//echo $aluno;
+
+$usuario = new Usuario();
+$usuario->loadById(8);
+$usuario->update("professor","lecionar");
+echo $usuario;
+
+
 
 ?>
